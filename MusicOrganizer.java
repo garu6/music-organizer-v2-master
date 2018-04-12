@@ -96,21 +96,19 @@ public class MusicOrganizer
     }
     
     public void listMatching(String searchString){
-        
+        boolean bien = false;
         for (String filename : files){
             if (filename.contains(searchString)){
-                
                 System.out.println(filename);
-            }else {
-                System.out.println("no se ha encontrado ningun nombre de archivo con esa cadena de busqueda");
-            }
-            
-            
+                bien = true;
         }
         
-        
+        if (!bien){
+            System.out.println("error no se ha encontado el archivo con el texto introducido");
+        }
         
     }
+}
     public void playArtist(String artista){
         for (String filename : files){
             if (filename.contains(artista)){
