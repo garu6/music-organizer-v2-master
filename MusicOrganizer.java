@@ -120,5 +120,35 @@ public class MusicOrganizer
         
     }
 }
+public int findFirst(String searchString){
+    
+ int index=0;
+ boolean searching = true;
+ 
+ while (searching && index < files.size()){
+     String filename = files.get(index);
+     if (filename.contains(searchString)) {
+         searching=false;
+         
+        }
+        else {
+            index++;
+        }
+    }
+    if (searching){
+        index = -1;
+    }
+    else{
+        index=index;
+    }
+    return index;
 }
+}
+    
+    
+    
+    
+    
+
+
 
