@@ -124,8 +124,9 @@ public int findFirst(String searchString){
     
  int index=0;
  boolean searching = true;
+ int elementos = files.size();
  
- while (searching && index < files.size()){
+ while (searching && index < elementos){
      String filename = files.get(index);
      if (filename.contains(searchString)) {
          searching=false;
