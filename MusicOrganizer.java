@@ -83,12 +83,24 @@ public class MusicOrganizer
         player.stop();
     }
     public void listAllFiles(){
-        int position =0;
+        int position =1;
         
         for (String filename :files){
          System.out.println(position + ": " + filename); 
          
          position++;
+        }
+        
+        
+        
+    }
+    
+    public void listMatching(String searchString){
+        for (String filename : files){
+            if (filename.contains(searchString)){
+                System.out.println(filename);
+            }
+            
         }
         
         
