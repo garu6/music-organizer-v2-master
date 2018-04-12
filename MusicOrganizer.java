@@ -85,7 +85,7 @@ public class MusicOrganizer
     public void listAllFiles(){
         int position =1;
         
-        for (String filename :files){
+        for (String filename : files){
          System.out.println(position + ": " + filename); 
          
          position++;
@@ -96,15 +96,31 @@ public class MusicOrganizer
     }
     
     public void listMatching(String searchString){
+        
         for (String filename : files){
             if (filename.contains(searchString)){
+                
                 System.out.println(filename);
+            }else {
+                System.out.println("no se ha encontrado ningun nombre de archivo con esa cadena de busqueda");
             }
+            
             
         }
         
         
         
     }
+    public void playArtist(String artista){
+        for (String filename : files){
+            if (filename.contains(artista)){
+                player.playSample(filename);
+                
+            
+        }
+        
+        
+    }
+}
 }
 
